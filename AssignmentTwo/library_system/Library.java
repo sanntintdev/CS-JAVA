@@ -10,11 +10,12 @@ public class Library {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        boolean isRunning = true;
+        boolean isRunning = true; // Flag to keep the program running
 
         while (isRunning) {
             displayMenu();
 
+            // Prompt the user for a menu choice
             try {
                 Integer menu = scanner.nextInt();
                 switch (menu) {
@@ -61,6 +62,11 @@ public class Library {
         Integer quantity = scanner.nextInt();
 
         boolean bookExists = false;
+
+        // Check if the book already exists
+        // If it does, increase the quantity
+        // If it doesn't, add the book
+
         for (Book book : books) {
             if (
                 book.getTitle().equals(title) && book.getAuthor().equals(author)
@@ -86,6 +92,10 @@ public class Library {
         System.out.print("Enter number of book...");
         Integer quantity = scanner.nextInt();
 
+        // Check if the book exists and if there are enough books to borrow
+        // If there are, borrow the book
+        // If there aren't, print a message
+
         for (Book book : books) {
             if (
                 book.getTitle().equals(title) && book.getQuantity() >= quantity
@@ -106,6 +116,10 @@ public class Library {
         String title = scanner.next();
         System.out.print("Enter number of book...");
         Integer quantity = scanner.nextInt();
+
+        // Check if the book exists
+        // If it does, return the book
+        // If it doesn't, print a message
 
         for (Book book : books) {
             if (book.getTitle().equals(title)) {
