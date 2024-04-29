@@ -25,6 +25,7 @@ public class StudentOperations {
         return;
     }
 
+    // Method to update a student in the studentList
     public static void updateStudent(
         int id,
         String name,
@@ -45,6 +46,7 @@ public class StudentOperations {
         System.out.println("Student not found");
     }
 
+    // Method to get the list of students in the studentList
     public static void getStudentList() {
         for (Student student : studentList) {
             System.out.println("________________________");
@@ -57,6 +59,7 @@ public class StudentOperations {
         return;
     }
 
+    // Method to get a student by ID
     public static void getStudentById(int id) {
         for (Student student : studentList) {
             if (student.getId() == id) {
@@ -73,6 +76,7 @@ public class StudentOperations {
         System.out.println("Student not found");
     }
 
+    // Method to delete a student by ID
     public static void deleteStudentById(int id) {
         for (Student student : studentList) {
             if (student.getId() == id) {
